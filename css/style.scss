@@ -1,0 +1,715 @@
+$first-color: #ff1a2c;
+$second-color: #333333;
+$third-color: #fff;
+$fourth-color: #22191a;
+
+$primary-hover-btn: #191919;
+
+$primary-size: 16px;
+$primary-line-height: 28px;
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+b {
+  font-family: "Open Sans", sans-serif;
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+body {
+  color: $third-color;
+  font-family: "Open Sans";
+  font-size: $primary-size;
+  font-weight: 400;
+  line-height: $primary-line-height;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.btn {
+  background-color: $first-color;
+  font-family: "Open Sans";
+  font-size: $primary-size + 2px;
+  text-transform: uppercase;
+  min-width: 180px;
+  padding: 12px 0;
+  display: inline-flex;
+  justify-content: center;
+  &:hover {
+    background: $primary-hover-btn;
+    color: $third-color;
+  }
+}
+
+.title {
+  text-align: center;
+}
+
+.first-title {
+  display: block;
+  color: $first-color;
+  font-family: "Great Vibes", cursive;
+  font-size: $primary-size + 18px;
+  padding: 70px 0 16px;
+}
+
+.second-title {
+  display: block;
+  color: $second-color;
+  font-family: "Fjalla One", sans-serif;
+  font-size: $primary-size + 28px;
+  text-transform: uppercase;
+  padding-bottom: 50px;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+}
+
+.header {
+  min-height: 780px;
+  background: #bd283c url(../img/header-bg.jpg) center / cover no-repeat;
+  .container {
+    text-align: center;
+    .top {
+      min-height: 117px;
+      text-transform: capitalize;
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      .btnOpen {
+        display: none;
+        position: absolute;
+      }
+      .logo {
+        position: absolute;
+        top: 9px;
+      }
+      .menu {
+        width: 100%;
+        ul {
+          display: flex;
+          flex-direction: row;
+          justify-content: center;
+          flex-wrap: wrap;
+          & > li {
+            min-width: 104px;
+            &:hover a {
+              padding-bottom: 13px;
+              border-bottom: 1px solid $first-color;
+            }
+            a {
+              font-family: "Fjalla One";
+              font-size: $primary-size + 4px;
+            }
+            & + li {
+              margin-left: 90px;
+              margin-right: 361px;
+            }
+            &:nth-child(3),
+            &:nth-child(4) {
+              margin-right: 0;
+            }
+          }
+        }
+      }
+    }
+    .button {
+      margin-top: 445px;
+    }
+  }
+}
+
+.aboutus {
+  .container {
+    .box {
+      display: flex;
+      justify-content: space-around;
+      &-text {
+        max-width: 454px;
+        margin-bottom: 70px;
+        p {
+          color: $fourth-color;
+          font-family: "Open Sans";
+          font-size: $primary-size;
+          & + p {
+            margin: 40px 0 37px;
+          }
+        }
+      }
+      &-img {
+        display: flex;
+        .img {
+          max-width: 315px;
+          min-height: 440px;
+          margin-bottom: 70px;
+          & + .img {
+            margin-left: 21px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.classes {
+  background: $fourth-color;
+  .container {
+    text-align: center;
+    padding-bottom: 70px;
+    .second-title {
+      color: $third-color;
+    }
+    & > p {
+      max-width: 933px;
+      margin: 0 auto;
+    }
+    .btn {
+      margin-top: 70px;
+      &:hover {
+        background: $third-color;
+        color: $primary-hover-btn;
+      }
+    }
+  }
+  .slider {
+    .item {
+      padding: 10px 0 10px;
+      max-width: 390px;
+      min-height: 300px;
+      position: relative;
+      &:hover {
+        img {
+          opacity: 0.4;
+          transform: scaleY(1.1);
+          transition: all 0.5s ease-out;
+        }
+        & > .text {
+          display: block;
+        }
+      }
+      .text {
+        display: none;
+        font-size: $primary-size + 12px;
+        position: absolute;
+        top: 35%;
+        left: 50%;
+        transform: translate(-50%, 0);
+        text-transform: uppercase;
+      }
+    }
+    button.slick-prev.slick-arrow {
+      position: absolute;
+      left: 10%;
+      top: 106%;
+      font-size: 0;
+      outline: none;
+      border: none;
+      &::after {
+        content: "";
+        width: 24px;
+        height: 11px;
+        background: url(../img/left_arrow.png) no-repeat center;
+        position: absolute;
+        cursor: pointer;
+      }
+    }
+    button.slick-next.slick-arrow {
+      position: absolute;
+      right: 10%;
+      top: 106%;
+      font-size: 0;
+      outline: none;
+      border: none;
+      &::after {
+        content: "";
+        width: 24px;
+        height: 11px;
+        background: url(../img/right_arrow.png) no-repeat center;
+        position: absolute;
+        cursor: pointer;
+      }
+    }
+
+    .myDots {
+      display: flex;
+      justify-content: center;
+      position: absolute;
+      left: 50%;
+      top: 110%;
+      transform: translate(-50%, -80%);
+      li {
+        width: 16px;
+        height: 16px;
+        border: 1px solid $first-color;
+        position: relative;
+        & + li {
+          margin-left: 14px;
+        }
+        button {
+          width: 16px;
+          height: 16px;
+          background: #fff0;
+          border: none;
+          display: block;
+          outline: none;
+          font-size: 0;
+          position: absolute;
+          cursor: pointer;
+        }
+      }
+      .slick-active button {
+        width: 8px;
+        height: 8px;
+        border: 1px solid $first-color;
+        background: $first-color;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+    }
+  }
+}
+
+.personal-training {
+  .container {
+    display: flex;
+    justify-content: space-around;
+    padding-bottom: 70px;
+    .img-box {
+      padding-top: 70px;
+      margin-right: 31px;
+      max-width: 555px;
+      .block {
+        max-width: 555px;
+        max-height: 270px;
+        & + .block {
+          margin-top: 20px;
+        }
+      }
+    }
+    .text {
+      max-width: 543px;
+      p {
+        color: $fourth-color;
+        margin-bottom: 30px;
+      }
+      h3 {
+        color: $fourth-color;
+        text-align: center;
+        span {
+          color: $first-color;
+          font-family: "Fjalla One";
+          font-size: $primary-size + 14px;
+          margin-left: 25px;
+        }
+      }
+    }
+  }
+}
+
+.vine-tasting {
+  background: $fourth-color;
+  .container {
+    padding-bottom: 70px;
+    .first-title.title {
+    }
+    .second-title.title {
+      color: $third-color;
+    }
+    .box {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-evenly;
+      .bottle {
+        position: relative;
+        max-width: 263px;
+        transition: all ease 3s;
+        &:nth-child(5),
+        &:nth-child(6),
+        &:nth-child(7),
+        &:nth-child(8) {
+          margin-top: 58px;
+        }
+        .picture {
+          max-height: 350px;
+        }
+        .btn {
+          position: absolute;
+          top: 30%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          display: none;
+          &:hover {
+            background: $third-color;
+            color: $fourth-color;
+          }
+        }
+        .title {
+          font-family: "Fjalla One";
+          font-size: 22px;
+          font-weight: 400;
+          line-height: 32px;
+          text-transform: uppercase;
+          margin-top: 16px;
+        }
+        &:hover {
+          & .btn {
+            display: inline-flex;
+            transition: all ease 1s;
+          }
+          & img {
+            transition: all ease 1s;
+            opacity: 0.4;
+          }
+        }
+      }
+    }
+    .btn {
+      text-align: center;
+      display: block;
+      width: 180px;
+      margin: 0 auto;
+      margin-top: 50px;
+      &:hover {
+        background: $third-color;
+        color: $fourth-color;
+      }
+    }
+  }
+}
+
+.testimonials {
+  background: #898989 url(../img/clients-bg.jpg) center / cover no-repeat;
+  .container {
+    padding-bottom: 70px;
+    h2 {
+      .first-title {
+      }
+      .second-title {
+        color: $third-color;
+        margin-bottom: 94px;
+        position: relative;
+        &::before {
+          //content: "“";
+          content: "";
+          background: url(../img/icon.jpg) center no-repeat;
+          position: absolute;
+          top: 200%;
+          left: 50%;
+          width: 22px;
+          height: 19px;
+          transform: translate(-50%, -50%);
+          color: $first-color;
+        }
+      }
+    }
+    .box {
+      max-width: 538px;
+      .sliderTestimonials {
+        .item-slider {
+          .text {
+            margin-bottom: 25px;
+          }
+          .author {
+            text-align: center;
+            font-weight: 700;
+            text-transform: uppercase;
+            margin-bottom: 73px;
+          }
+        }
+        button.slick-prev.slick-arrow {
+          position: absolute;
+          left: 10%;
+          top: 106%;
+          font-size: 0;
+          outline: none;
+          border: none;
+          &::after {
+            content: "";
+            width: 24px;
+            height: 11px;
+            background: url(../img/left_arrow.png) no-repeat center;
+            position: absolute;
+            cursor: pointer;
+          }
+        }
+        button.slick-next.slick-arrow {
+          position: absolute;
+          right: 10%;
+          top: 106%;
+          font-size: 0;
+          outline: none;
+          border: none;
+          &::after {
+            content: "";
+            width: 24px;
+            height: 11px;
+            background: url(../img/right_arrow.png) no-repeat center;
+            position: absolute;
+            cursor: pointer;
+          }
+        }
+
+        .myDots {
+          display: flex;
+          justify-content: center;
+          position: absolute;
+          left: 50%;
+          top: 110%;
+          transform: translate(-50%, -80%);
+          li {
+            width: 16px;
+            height: 16px;
+            border: 1px solid $first-color;
+            position: relative;
+
+            & + li {
+              margin-left: 14px;
+            }
+            button {
+              cursor: pointer;
+              width: 16px;
+              height: 16px;
+              background: #fff0;
+              border: none;
+              display: block;
+              outline: none;
+              font-size: 0;
+              position: absolute;
+            }
+          }
+          .slick-active button {
+            width: 8px;
+            height: 8px;
+            border: 1px solid $first-color;
+            background: $first-color;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+          }
+        }
+      }
+    }
+  }
+}
+
+.footer {
+  background: #22191a;
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 11px 15px 15px;
+    .logo {
+      max-width: 120px;
+      max-height: 124px;
+    }
+    nav {
+      ul {
+        display: flex;
+        li {
+          padding-bottom: 13px;
+          & + li {
+            margin-left: 100px;
+          }
+          &:hover {
+            padding-bottom: 12px;
+            border-bottom: 1px solid #ff1a2c;
+          }
+          a {
+          }
+        }
+      }
+    }
+    .connect {
+      .box {
+        display: flex;
+        justify-content: space-around;
+        margin-bottom: 24px;
+        .img {
+          margin-top: 24px;
+          width: 12px;
+          height: 21px;
+          & + .img {
+            width: 21px;
+            height: 21px;
+          }
+        }
+      }
+    }
+  }
+  .line {
+    min-height: 40px;
+    background-color: #000000;
+    .container {
+      span {
+        margin: 0 auto;
+      }
+    }
+  }
+}
+
+@media all and (max-width: 1081px) {
+  .header {
+    .container {
+      .top {
+        position: relative;
+        .btnOpen {
+          display: block;
+          position: absolute;
+          right: 5%;
+          padding: 10px;
+          z-index: 2;
+        }
+        .menu {
+          display: none;
+          position: absolute;
+          top: 5%;
+          background: #000;
+          z-index: 1;
+          padding-top: 20px;
+          padding-bottom: 20px;
+          ul {
+            flex-direction: column;
+            line-height: 60px;
+            & > li {
+              margin: 0 !important;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .vine-tasting {
+    .container {
+      .box {
+        .bottle {
+          &:nth-child(4) {
+            margin-top: 58px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media all and (max-width: 950px) {
+  .footer {
+    .container {
+      flex-direction: column;
+      .logo {
+        margin-bottom: 30px;
+      }
+    }
+  }
+}
+
+@media all and (max-width: 818px) {
+  .aboutus {
+    .container {
+      .box {
+        flex-direction: column-reverse;
+        .box-text {
+          margin: 0 auto;
+          padding-bottom: 50px;
+        }
+        .box-img {
+          margin: 0 auto;
+        }
+      }
+    }
+  }
+
+  .personal-training {
+    .container {
+      display: flex;
+      flex-direction: column-reverse;
+      .text {
+        margin: 0 auto;
+      }
+      .img-box {
+        margin: 0 auto;
+      }
+    }
+  }
+
+  .vine-tasting {
+    .container {
+      .box {
+        .bottle {
+          &:nth-child(3) {
+            margin-top: 58px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media all and (max-width: 617px) {
+  .footer {
+    .container {
+      nav {
+        ul {
+          flex-wrap: wrap;
+          li {
+            & + li {
+              margin-left: 10px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media all and (max-width: 555px) {
+  .vine-tasting {
+    .container {
+      .box {
+        .bottle {
+          &:nth-child(2) {
+            margin-top: 58px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media all and (max-width: 346px) {
+  .footer {
+    .container {
+      nav {
+        ul {
+          justify-content: center;
+          margin-bottom: 25px;
+          line-height: 30px;
+        }
+      }
+    }
+  }
+}
