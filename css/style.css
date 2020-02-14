@@ -81,7 +81,7 @@ img {
 
 .header {
   min-height: 780px;
-  background: #bd283c url(../img/header-bg.jpg) center/cover no-repeat;
+  background: #bd283c url(../img/optimization/header-bg.jpg) center/cover no-repeat;
 }
 
 .header .container {
@@ -269,7 +269,7 @@ img {
   content: "";
   width: 24px;
   height: 11px;
-  background: url(../img/left_arrow.png) no-repeat center;
+  background: url(../img/optimization/left_arrow.png) no-repeat center;
   position: absolute;
   cursor: pointer;
 }
@@ -287,7 +287,7 @@ img {
   content: "";
   width: 24px;
   height: 11px;
-  background: url(../img/right_arrow.png) no-repeat center;
+  background: url(../img/optimization/right_arrow.png) no-repeat center;
   position: absolute;
   cursor: pointer;
 }
@@ -475,7 +475,7 @@ img {
 }
 
 .testimonials {
-  background: #898989 url(../img/clients-bg.jpg) center/cover no-repeat;
+  background: #898989 url(../img/optimization/clients-bg.jpg) center/cover no-repeat;
 }
 
 .testimonials .container {
@@ -490,7 +490,7 @@ img {
 
 .testimonials .container h2 .second-title::before {
   content: "";
-  background: url(../img/icon.jpg) center no-repeat;
+  background: url(../img/optimization/icon.jpg) center no-repeat;
   position: absolute;
   top: 200%;
   left: 50%;
@@ -529,7 +529,7 @@ img {
   content: "";
   width: 24px;
   height: 11px;
-  background: url(../img/left_arrow.png) no-repeat center;
+  background: url(../img/optimization/left_arrow.png) no-repeat center;
   position: absolute;
   cursor: pointer;
 }
@@ -547,7 +547,7 @@ img {
   content: "";
   width: 24px;
   height: 11px;
-  background: url(../img/right_arrow.png) no-repeat center;
+  background: url(../img/optimization/right_arrow.png) no-repeat center;
   position: absolute;
   cursor: pointer;
 }

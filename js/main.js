@@ -1,5 +1,6 @@
 $(function() {
   $("#slider").slick({
+    autoplay: true,
     slidesToShow: 4,
     slidesToScroll: 1,
     dots: true,
@@ -25,6 +26,7 @@ $(function() {
   });
 
   $("#sliderTestimonials").slick({
+    autoplay: true,
     slidesToShow: 1,
     slidesToScroll: 1,
     dots: true,
